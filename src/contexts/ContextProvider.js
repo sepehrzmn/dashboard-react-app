@@ -5,16 +5,29 @@ const StateContent = createContext();
 const initialState = {
 	chat: false,
 	cart: false,
-	useProfile: false,
+	userProfile: false,
 	notification: false,
 };
 
 export const ContentProvider = ({ children }) => {
 	const [activeMenu, setActiveMenu] = useState(true);
+	const [isChecked, setIsChecked] = useState(initialState);
+	const [screenSize, setScreenSize] = useState(undefined);
+	const handleClick = (clicked) => {
+		setIsChecked((preventIsChecked) => ({ ...initialState, [clicked]: true }));
+	};
 
-	return (
-		<StateContent.Provider value={{ activeMenu, setActiveMenu }}>{children}</StateContent.Provider>
-	);
+	const value = {
+		activeMenu,
+		setActiveMenu,
+		isChecked,
+		setIsChecked,
+		handleClick,
+		screenSize,
+		setScreenSize,
+	};
+
+	return <StateContent.Provider value={value}>{children}</StateContent.Provider>;
 };
 
 export const useStateContext = () => useContext(StateContent);

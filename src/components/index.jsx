@@ -8,6 +8,7 @@ export { default as Navbar } from "./Navbar";
 export { default as Notification } from "./Notification";
 export { default as Sidebar } from "./Sidebar";
 export { default as ThemeSetting } from "./ThemeSetting";
+export { default as UserProfile } from "./UserProfile";
 
 export { default as LineCharts } from "./Charts/LineCharts";
 export { default as Pie } from "./Charts/Pie";
