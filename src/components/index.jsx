@@ -11,6 +11,6 @@ export { default as ThemeSetting } from "./ThemeSetting";
 export { default as UserProfile } from "./UserProfile";
 
 export { default as LineCharts } from "./Charts/LineCharts";
-export { default as Pie } from "./Charts/Pie";
+export { default as PieChart } from "./Charts/Pie";
 export { default as SparkLine } from "./Charts/SparkLine";
 export { default as Stacked } from "./Charts/Stacked";

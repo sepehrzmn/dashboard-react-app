@@ -43,6 +43,37 @@
 	background-color: #008000;
 }
 
+.dark .e-grid th,.dark .e-toolbar .e-toolbar-items,
+.dark .e-pager,.dark .e-pagercontainer
+{
+	background-color: #343434 ;
+	color: rgb(218, 218, 218) !important;
+
+} 
+
+.dark .e-grid {
+	border : none
+}
+.dark .e-grid .e-rowcell {   
+	color: rgb(218, 218, 218) !important;
+	background-color: #3e3e3e;
+	border: none;
+} 
+.e-input-group .e-search input{
+	color: rgb(218, 218, 218) !important;
+
+}
+.dark .e-tbar-btn,.dark .e-pager-default{
+	background: #767676;
+	border-radius: 10px;
+	color: rgb(218, 218, 218) !important;
+}
+.dark .e-pagercontainer .e-disable{
+	border-radius: 10px;
+}
+.dark input,.dark input::placeholder {
+	color: aliceblue !important;
+}
 .e-input-group:not(.e-float-icon-left),
 .e-input-group.e-success:not(.e-float-icon-left),
 .e-input-group.e-warning:not(.e-float-icon-left),

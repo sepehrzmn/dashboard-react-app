@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 
 const Button = ({ color, bgColor, text, borderRadius, size }) => {
   return (
-    <button className={`bg-[${bgColor}] text-${color} text-${size} p-3 hover:drop-shadow-xl`} style={{ borderRadius }}>
+    <button
+      className={`text-${color} text-${size} p-3 hover:drop-shadow-xl`}
+      style={{ borderRadius, backgroundColor: bgColor }}
+    >
       {text}
     </button>
   );

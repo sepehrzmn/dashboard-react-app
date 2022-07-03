@@ -2,11 +2,13 @@ import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 
-import { Pie, Button, SparkLine, Stacked } from "../components";
-import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
+import { Button, SparkLine, Stacked } from "../components";
+import { earningData, SparklineAreaData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ECommerce = () => {
+  const { currentColor } = useStateContext();
+
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -18,7 +20,7 @@ const ECommerce = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="sm" />
+            <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="sm" />
           </div>
         </div>
         <div className="flex m-3 flex-wrap justify-center items-center gap-1 ">
@@ -82,17 +84,17 @@ const ECommerce = () => {
               </div>
               <div className="mt-5">
                 <SparkLine
-                  currentColor="blue"
+                  currentColor={currentColor}
                   id="line-sparkline"
                   type="Line"
                   height="80px"
                   width="250px"
                   data={SparklineAreaData}
-                  color="blue"
+                  color={currentColor}
                 />
               </div>
               <div className="mt-10">
-                <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px" size="sm" />
+                <Button color="white" bgColor={currentColor} text="Download Report" borderRadius="10px" size="sm" />
               </div>
             </div>
             <div>

@@ -25,14 +25,14 @@ const Customers = () => {
   };
 
   return (
-    <div className="m-3 md:m-10 p-4 rounded-3xl bg-white">
+    <div className="m-3 md:m-10 p-4 rounded-3xl bg-white dark:bg-secondary-dark-bg dark:text-slate-200 ">
       <Header category="Pages" title="Customers" />
       <GridComponent
         id="gridComp"
         dataSource={customersData}
         allowPaging
         allowSorting
-		allowSelection
+        allowSelection
         editSettings={editSetting}
         toolbar={toolbar}
         editSettingsTemplate={editButton}
