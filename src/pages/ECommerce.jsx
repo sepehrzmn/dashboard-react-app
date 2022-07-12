@@ -1,9 +1,8 @@
 import React from "react";
-import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 
-import { Button, SparkLine, Stacked } from "../components";
-import { earningData, SparklineAreaData } from "../data/dummy";
+import { Button, PieChart, SparkLine, Stacked } from "../components";
+import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ECommerce = () => {
@@ -46,8 +45,8 @@ const ECommerce = () => {
           ))}
         </div>
       </div>
-      <div className="flex gap-10 flex-wrap justify-center ">
-        <div className="bg-white dark:bg-secondary-dark-bg dark:text-gray-200 m-3 p-4 rounded-2xl md:w-780">
+      <div className="flex gap-10 justify-center flex-wrap ">
+        <div className="bg-white dark:bg-secondary-dark-bg dark:text-gray-200 m-3 p-4 rounded-2xl xl:w-2/4 w-full">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Update</p>
             <div className="flex items-center gap-4">
@@ -99,6 +98,13 @@ const ECommerce = () => {
             </div>
             <div>
               <Stacked width="320px" height="360px" />
+            </div>
+          </div>
+        </div>
+        <div className="bg-white dark:bg-secondary-dark-bg dark:text-gray-200 m-3 p-4 xl:w-1/4 rounded-xl w-full ">
+          <div className="flex flex-col justify-center ">
+            <div className="">
+              <PieChart data={ecomPieChartData} radius="50%" />
             </div>
           </div>
         </div>
