@@ -1,4 +1,8 @@
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+} from "react";
 
 const StateContent = createContext();
 
@@ -10,17 +14,26 @@ const initialState = {
 };
 
 export const ContentProvider = ({ children }) => {
-  const [activeMenu, setActiveMenu] = useState(true);
-  const [isChecked, setIsChecked] = useState(initialState);
-  const [screenSize, setScreenSize] = useState(undefined);
-  const [currentColor, setCurrentColor] = useState("#1A97F5");
-  const [currentMode, setCurrentMode] = useState("Light");
-  const [themeSettings, setThemeSettings] = useState(false);
+  const [activeMenu, setActiveMenu] =
+    useState(true);
+  const [isChecked, setIsChecked] =
+    useState(initialState);
+  const [screenSize, setScreenSize] =
+    useState(undefined);
+  const [currentColor, setCurrentColor] =
+    useState("#1A97F5");
+  const [currentMode, setCurrentMode] =
+    useState("Light");
+  const [themeSettings, setThemeSettings] =
+    useState(false);
 
   const setMode = (e) => {
     setCurrentMode(e.target.value);
 
-    localStorage.setItem("themeMode", e.target.value);
+    localStorage.setItem(
+      "themeMode",
+      e.target.value
+    );
 
     setThemeSettings(false);
   };
@@ -32,8 +45,15 @@ export const ContentProvider = ({ children }) => {
     setThemeSettings(false);
   };
 
-  const handleClick = (clicked) => {
-    setIsChecked((preventIsChecked) => ({ ...initialState, [clicked]: true }));
+  const handleClick = (clicked = false) => {
+    if (!clicked) {
+      setIsChecked(initialState);
+      return;
+    }
+    setIsChecked({
+      ...initialState,
+      [clicked]: true,
+    });
   };
 
   const value = {
@@ -52,7 +72,12 @@ export const ContentProvider = ({ children }) => {
     themeSettings,
   };
 
-  return <StateContent.Provider value={value}>{children}</StateContent.Provider>;
+  return (
+    <StateContent.Provider value={value}>
+      {children}
+    </StateContent.Provider>
+  );
 };
 
-export const useStateContext = () => useContext(StateContent);
+export const useStateContext = () =>
+  useContext(StateContent);
