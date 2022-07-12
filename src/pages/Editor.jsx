@@ -13,9 +13,15 @@ import { EditorData } from "../data/dummy";
 import { Header } from "../components";
 
 const Editor = () => {
-  const services = [HtmlEditor, Image, Link, QuickToolbar, Toolbar];
+  const services = [
+    HtmlEditor,
+    Image,
+    Link,
+    QuickToolbar,
+    Toolbar,
+  ];
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-xl">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-xl dark:bg-secondary-dark-bg">
       <Header category="App" title="Editor" />
       <RichTextEditorComponent>
         <EditorData />
