@@ -12,7 +12,7 @@ import {
 
 import { useStateContext } from "../../contexts/ContextProvider";
 
-const Pie = ({ data }) => {
+const Pie = ({ data, radius }) => {
   const { currentMode } = useStateContext();
   const services = [PieSeries, AccumulationLegend, AccumulationDataLabel, AccumulationTooltip];
   const condition = currentMode === "Dark";
@@ -26,6 +26,8 @@ const Pie = ({ data }) => {
       }}
       tooltip={{ enable: true }}
       background="transparent"
+      width="100%"
+      height="100%"
     >
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective
@@ -33,7 +35,7 @@ const Pie = ({ data }) => {
           xName="x"
           yName="y"
           type="Pie"
-          radius="100%"
+          radius={radius}
           name="Sale"
           dataLabel={{
             visible: true,
