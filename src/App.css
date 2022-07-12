@@ -1,78 +1,138 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
 
 .sidebar {
-	box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px
+    0px;
 }
 .nav-item,
 .navbar {
-	z-index: 10000;
+  z-index: 10000;
 }
 @media screen and (max-width: 800px) {
-	.sidebar {
-		z-index: 10000000;
-	}
+  .sidebar {
+    z-index: 10000000;
+  }
 }
 
 .e-dlg-center-center,
 .e-quick-popup-wrapper.e-device {
-	z-index: 1000000 !important;
+  z-index: 1000000 !important;
 }
 
 ::-webkit-scrollbar {
-	width: 6px;
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: rgb(216, 216, 216);
-	border-radius: 40px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
 }
 ::-webkit-scrollbar-track {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 /* color-picker style  */
 
 #preview {
-	background: transparent
-		url("https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png")
-		no-repeat;
-	display: inline-block;
-	height: 80px;
-	margin: 10px 0;
-	min-width: 300px;
-	max-width: 600px;
-	background-color: #008000;
+  background: transparent
+    url("https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png")
+    no-repeat;
+  display: inline-block;
+  height: 80px;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #008000;
 }
 
-.dark .e-grid th,.dark .e-toolbar .e-toolbar-items,
-.dark .e-pager,.dark .e-pagercontainer
-{
-	background-color: #343434 ;
-	color: rgb(218, 218, 218) !important;
-
-} 
+.dark .e-grid th,
+.dark .e-toolbar .e-toolbar-items,
+.dark .e-pager,
+.dark .e-pagercontainer {
+  background-color: #343434;
+  color: rgb(218, 218, 218) !important;
+}
 
 .dark .e-grid {
-	border : none
+  border: none;
 }
-.dark .e-grid .e-rowcell {   
-	color: rgb(218, 218, 218) !important;
-	background-color: #3e3e3e;
-	border: none;
-} 
-.e-input-group .e-search input{
-	color: rgb(218, 218, 218) !important;
+.dark .e-grid .e-rowcell {
+  color: rgb(218, 218, 218) !important;
+  background-color: #3e3e3e;
+  border: none;
+}
+.e-input-group .e-search input {
+  color: rgb(218, 218, 218) !important;
+}
+.dark .e-tbar-btn,
+.dark .e-pager-default {
+  background: #767676;
+  border-radius: 10px;
+  color: rgb(218, 218, 218) !important;
+}
+.dark .e-pagercontainer .e-disable {
+  border-radius: 10px;
+}
+.dark input,
+.dark input::placeholder {
+  color: aliceblue !important;
+}
 
+.dark .e-container {
+  background-color: transparent !important;
 }
-.dark .e-tbar-btn,.dark .e-pager-default{
-	background: #767676;
-	border-radius: 10px;
-	color: rgb(218, 218, 218) !important;
+.dark #richtexteditor_1222336922_0_toolbar {
+  background-color: #282828;
 }
-.dark .e-pagercontainer .e-disable{
-	border-radius: 10px;
+.dark .e-rte-content {
+  color: #fffaff;
+  background-color: #373737;
 }
-.dark input,.dark input::placeholder {
-	color: aliceblue !important;
+
+.dark #kanban {
+  background-color: transparent !important;
+}
+.dark #kanban th,
+.dark #kanban .e-header-text,
+.dark #kanban td {
+  background-color: #434343;
+  color: #767676 !important;
+}
+.dark #calender .e-header-cells,
+.dark #calender,
+.dark #calender .e-time-slots,
+.dark #calender .e-work-cells,
+.dark #calender .e-agenda-cells {
+  background-color: transparent;
+  color: #adadad !important;
+  border: rgb(72, 72, 72) solid 1px;
+}
+.dark #calender .e-agenda-cells div {
+  color: #adadad !important;
+}
+.dark #kanban .e-card div {
+  background-color: #282828;
+  color: #adadad !important;
+}
+.dark #calender table {
+  background-color: #282828 !important;
+}
+.dark #calender .e-work-cells {
+  background-color: #282828 !important;
+}
+.dark #calender .e-appointment {
+  background-color: #4e4e4e !important;
+  color: #cecece !important;
+}
+.dark #calender .e-agenda-item .e-appointment {
+  background-color: #777777 !important;
+  color: #cecece !important;
+  border-left: 3px solid #c10b20 !important;
+}
+
+.dark #calender .e-agenda-item {
+  background-color: #777777 !important;
+}
+.dark #calender .e-agenda-cells {
 }
 .e-input-group:not(.e-float-icon-left),
 .e-input-group.e-success:not(.e-float-icon-left),
@@ -82,5 +142,5 @@
 .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left),
 .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left),
 .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
-	border: none;
+  border: none;
 }
