@@ -1,3 +1,17 @@
+# Introduction
+
+This app has a dashboard to display various graphs and the ability to edit text, calendar, kanban, color picker, as well as lists with filtering and editing capabilities, as well as the ability to change themes and supports dark mode.
+
+## Tools
+
+1. ⭐[react-router-dom v6](https://reactrouter.com/docs/en/v6)
+2. ⭐[syncfusion](https://ej2.syncfusion.com/react/documentation/introduction/)
+3. ⭐[tailwindcss](https://tailwindcss.com)
+
+## With help from:
+
+⭐[JavaScript Mastery](https://www.youtube.com/c/JavaScriptMastery)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
