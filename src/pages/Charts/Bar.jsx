@@ -35,7 +35,7 @@ const Bar = () => {
       >
         <SeriesCollectionDirective>
           {barCustomSeries.map((item, index) => (
-            <SeriesDirective key={index} {...item} />
+            <SeriesDirective key={index} {...item} cornerRadius={{ topLeft: 5, topRight: 5 }} />
           ))}
         </SeriesCollectionDirective>
 

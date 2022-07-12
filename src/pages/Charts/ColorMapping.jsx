@@ -14,16 +14,27 @@ import {
 
 import { Header } from "../../components";
 import { colorMappingData, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis } from "../../data/dummy";
+import { useStateContext } from "../../contexts/ContextProvider";
 
 const ColorMapping = () => {
+  const { currentMode } = useStateContext();
   const services = [ColumnSeries, Tooltip, Category, Legend];
+  const condition = currentMode === "Dark";
 
   return (
     <div className="m-4 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-xl dark:bg-secondary-dark-bg dark:text-slate-200">
       <Header category="chart" title="USA CLIMATE - WEATHER BY MONTH" />
       <ChartComponent
-        primaryXAxis={ColorMappingPrimaryXAxis}
-        primaryYAxis={ColorMappingPrimaryYAxis}
+        primaryXAxis={{
+          ...ColorMappingPrimaryXAxis,
+          labelStyle: { color: condition ? "#fffa" : "#000" },
+          titleStyle: { color: condition ? "#fffa" : "#000" },
+        }}
+        primaryYAxis={{
+          ...ColorMappingPrimaryYAxis,
+          labelStyle: { color: condition ? "#fffa" : "#000" },
+          titleStyle: { color: condition ? "#fffa" : "#000" },
+        }}
         background="transparent"
         legendSettings={{ visible: true, background: "transparent" }}
         chartArea={{ border: { width: 0 } }}
