@@ -1,13 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Button = ({ color, bgColor, text, borderRadius, size }) => {
+const Button = ({
+  color,
+  bgColor,
+  text,
+  borderRadius,
+  size,
+  icon,
+  width,
+  colorHover,
+}) => {
   return (
     <button
-      className={`text-${color} text-${size} p-3 hover:drop-shadow-xl`}
-      style={{ borderRadius, backgroundColor: bgColor }}
+      className={`text-${color} text-${size} p-3 hover:drop-shadow-xl ${
+        colorHover && `hover:bg-${colorHover}`
+      } ${width && `w-${width}`}  `}
+      style={{
+        borderRadius,
+        backgroundColor: bgColor,
+      }}
     >
-      {text}
+      {text ? text : icon}
     </button>
   );
 };
@@ -18,6 +32,9 @@ Button.propsTypes = {
   text: PropTypes.string,
   borderRadius: PropTypes.string,
   size: PropTypes.string,
+  width: PropTypes.string,
+  colorHover: PropTypes.string,
+  icon: PropTypes.func,
 };
 
 export default Button;
