@@ -1,5 +1,6 @@
 # Introduction
 
+
 This app has a dashboard to display various graphs and the ability to edit text, calendar, kanban, color picker, as well as lists with filtering and editing capabilities, as well as the ability to change themes and supports dark mode.
 
 ## Tools
